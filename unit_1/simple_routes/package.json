@@ -1,0 +1,16 @@
+{
+  "name": "simple_routes",
+  "version": "1.0.0",
+  "description": "\"Simple routing\"",
+  "license": "ISC",
+  "author": "Paul",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "http-status-code": "^2.1.0",
+    "http-status-codes": "^2.3.0"
+  }
+}

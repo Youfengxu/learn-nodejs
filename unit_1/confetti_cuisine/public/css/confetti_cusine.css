@@ -1,0 +1,379 @@
+/* =============================================
+   Confetti Cuisine — Corporate Stylesheet
+   ============================================= */
+
+/* ----- Variables ----- */
+:root {
+  --primary:       #c0392b;
+  --primary-dark:  #96281b;
+  --accent:        #e67e22;
+  --dark:          #1a1a1a;
+  --light-bg:      #fafaf8;
+  --muted:         #6c757d;
+  --border:        #e0ddd8;
+  --white:         #ffffff;
+  --font-heading:  'Georgia', serif;
+  --font-body:     'Helvetica Neue', Arial, sans-serif;
+  --radius:        6px;
+  --shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md:     0 4px 20px rgba(0, 0, 0, 0.12);
+  --transition:    0.25s ease;
+}
+
+/* ----- Reset & Base ----- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--dark);
+  background-color: var(--light-bg);
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--dark);
+  margin-top: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----- Navbar ----- */
+.navbar {
+  background-color: var(--dark) !important;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white) !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand span {
+  color: var(--accent);
+}
+
+.navbar .nav-link {
+  color: #ccc !important;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem !important;
+  transition: color var(--transition);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-item.active .nav-link {
+  color: var(--white) !important;
+  text-decoration: none;
+}
+
+.navbar .nav-item.active .nav-link {
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ----- Jumbotron / Hero ----- */
+.jumbotron {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+  color: var(--white);
+  padding: 5rem 2rem;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.jumbotron h1,
+.jumbotron .display-4 {
+  color: var(--white);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.jumbotron .lead {
+  font-size: 1.25rem;
+  opacity: 0.92;
+  margin-bottom: 2rem;
+}
+
+/* ----- Buttons ----- */
+.btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius);
+  transition: background-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--muted);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  color: var(--white);
+}
+
+.btn-lg {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  margin: 0.25rem;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+}
+
+/* ----- Cards ----- */
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.card-footer {
+  background-color: #f8f5f2;
+  border-top: 1px solid var(--border);
+  padding: 0.75rem 1.25rem;
+}
+
+/* ----- Badges ----- */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.7em;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary  { background-color: var(--primary);  color: var(--white); }
+.badge-warning  { background-color: var(--accent);   color: var(--white); }
+.badge-success  { background-color: #27ae60;         color: var(--white); }
+
+/* ----- Forms ----- */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.35rem;
+  display: block;
+  color: #444;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--white);
+  color: var(--dark);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Contact page second form */
+.contact-form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f5f2;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.contact-form input[type="email"] {
+  flex: 1;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: border-color var(--transition);
+}
+
+.contact-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+}
+
+.contact-form .button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.contact-form .button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ----- Sections & Layout ----- */
+.container {
+  max-width: 1140px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ----- Error Page ----- */
+.display-1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+/* ----- Thank You / Confirmation ----- */
+.text-success {
+  color: #27ae60 !important;
+}
+
+/* ----- Footer ----- */
+footer {
+  background-color: var(--dark) !important;
+  color: #aaa;
+  font-size: 0.875rem;
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  color: #aaa;
+}
+
+/* ----- Utility ----- */
+.text-muted   { color: var(--muted) !important; }
+.text-danger  { color: var(--primary) !important; }
+
+.my-5  { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+.mb-2  { margin-bottom: 0.5rem !important; }
+.mb-3  { margin-bottom: 1rem !important; }
+.mb-4  { margin-bottom: 1.5rem !important; }
+.mt-3  { margin-top: 1rem !important; }
+.mt-4  { margin-top: 1.5rem !important; }
+.mt-5  { margin-top: 3rem !important; }
+.mr-2  { margin-right: 0.5rem !important; }
+.py-3  { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+
+.img-fluid  { max-width: 100%; height: auto; }
+.rounded    { border-radius: var(--radius) !important; }
+.text-center { text-align: center !important; }
+.text-white  { color: var(--white) !important; }
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  line-height: 2;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}

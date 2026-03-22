@@ -1,0 +1,12 @@
+{
+  "name": "confetti_cuisine",
+  "version": "1.0.0",
+  "description": "A site for booking classes for Confetti Cusine",
+  "license": "ISC",
+  "author": "Paul",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
