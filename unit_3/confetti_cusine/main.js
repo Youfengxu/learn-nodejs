@@ -25,6 +25,7 @@ mongoose.connect("mongodb://localhost:27017/confetti_cusine");
 const homeController = require("./controllers/homeController");
 const errorController = require("./controllers/errorController");
 const subscriberController = require("./controllers/subscriberController");
+const usersController = require("./controllers/usersController");
 //set default route
 app.get("/", homeController.showHome);
 
@@ -34,6 +35,7 @@ app.get("/contact", subscriberController.getSubscriptionPage);
 app.post("/contact", subscriberController.saveSubscriber);
 app.get("/subscribers", subscriberController.getAllSubscribers);
 //app.get("/subscribe", subscriberController.subscriptionComplete)
+app.get("/users", usersController.index);
 //Add error routes
 app.use(errorController.pageNotFoundError);
 app.use(errorController.internalServerError);
